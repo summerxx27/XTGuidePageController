@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "CALayer+Transition.h"
-typedef void(^block)(UIButton *btn, BOOL isShow, TransitionAnimType aniType, TransitionSubType dirType);
 
+@protocol selectDelegate <NSObject>
 
+- (void)click;
+
+@end
 @interface XTGuidePagesViewController : UIViewController
 
+@property (nonatomic, strong) UIButton *btnEnter;
 // 初始化引导页
-+ (instancetype)XTGuidePagesViewControllerOfImages:(NSArray *)images
-                                        setUpBlock:(block) setupBlock;
-
+- (void)initWithXTGuideView:(NSArray *)images;
+- (BOOL)isShow;
+@property (nonatomic, assign) id<selectDelegate> delegate;
++ (instancetype)shareXTGuideVC;
 @end

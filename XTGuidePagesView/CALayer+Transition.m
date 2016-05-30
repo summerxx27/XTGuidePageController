@@ -10,12 +10,10 @@
 
 /**
  *  转场动画
- *
  *  @param animType 转场动画类型
  *  @param subtype  转动动画方向
  *  @param curve    转动动画曲线
  *  @param duration 转动动画时长
- *
  *  @return 转场动画实例
  */
 -(CATransition *)transitionWithAnimType:(TransitionAnimType)animType subType:(TransitionSubType)subType curve:(TransitionCurve)curve duration:(CGFloat)duration{
@@ -51,9 +49,7 @@
 
 
 
-/*
- *  返回动画曲线
- */
+// 返回动画曲线
 -(NSString *)curve:(TransitionCurve)curve{
     
     //曲线数组
@@ -91,15 +87,11 @@
 
 
 
-/*
- *  统一从数据返回对象
- */
+// 统一从数据返回对象
 -(id)objFromArray:(NSArray *)array index:(NSUInteger)index isRamdom:(BOOL)isRamdom{
-    
     NSUInteger count = array.count;
     
     NSUInteger i = isRamdom?arc4random_uniform((u_int32_t)count) : index;
-    
     return array[i];
 }
 

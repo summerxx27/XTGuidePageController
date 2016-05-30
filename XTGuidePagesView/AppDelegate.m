@@ -8,26 +8,35 @@
 
 #import "AppDelegate.h"
 #import "XTGuidePagesViewController.h"
+#import "ViewController.h"
 #import "CALayer+Transition.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<selectDelegate>
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     NSArray *images = @[@"1", @"2", @"3"];
-    self.window.rootViewController = [XTGuidePagesViewController XTGuidePagesViewControllerOfImages:images setUpBlock:^(UIButton *btn, BOOL isShow, TransitionAnimType aniType, TransitionSubType dirType) {
-        //
-    }];
+    if ([[[XTGuidePagesViewController alloc] init] isShow]) {
+        self.window.rootViewController = [XTGuidePagesViewController shareXTGuideVC];
+        [[XTGuidePagesViewController shareXTGuideVC] initWithXTGuideView:images];
+        [XTGuidePagesViewController shareXTGuideVC].delegate = self;
+    }else{
+        [self click];
+    }
     
     return YES;
 }
-
+- (void)click
+{
+    ViewController *vc = [[ViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window.layer transitionWithAnimType:TransitionAnimTypeRamdom subType:TransitionSubtypesFromRamdom curve:TransitionCurveRamdom duration:2.0f];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

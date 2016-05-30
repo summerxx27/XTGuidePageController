@@ -16,7 +16,6 @@
 		BC6801871CFC171500D5F82B /* XTGuidePagesViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801861CFC171500D5F82B /* XTGuidePagesViewTests.m */; };
 		BC6801921CFC171500D5F82B /* XTGuidePagesViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801911CFC171500D5F82B /* XTGuidePagesViewUITests.m */; };
 		BC6801A11CFC172D00D5F82B /* XTGuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */; };
-		BC6801A41CFC1AE600D5F82B /* GuidePageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801A31CFC1AE600D5F82B /* GuidePageScrollView.m */; };
 		BC6801A71CFC1F8E00D5F82B /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */; };
 		BC6801A91CFC201000D5F82B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801A81CFC201000D5F82B /* 1.png */; };
 		BC6801AB1CFC201A00D5F82B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801AA1CFC201A00D5F82B /* 2.png */; };
@@ -59,8 +58,6 @@
 		BC6801931CFC171500D5F82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC68019F1CFC172D00D5F82B /* XTGuidePagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGuidePagesViewController.h; sourceTree = "<group>"; };
 		BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewController.m; sourceTree = "<group>"; };
-		BC6801A21CFC1AE600D5F82B /* GuidePageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageScrollView.h; sourceTree = "<group>"; };
-		BC6801A31CFC1AE600D5F82B /* GuidePageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageScrollView.m; sourceTree = "<group>"; };
 		BC6801A51CFC1F8E00D5F82B /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
 		BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		BC6801A81CFC201000D5F82B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -125,8 +122,6 @@
 				BC6801731CFC171500D5F82B /* ViewController.m */,
 				BC68019F1CFC172D00D5F82B /* XTGuidePagesViewController.h */,
 				BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */,
-				BC6801A21CFC1AE600D5F82B /* GuidePageScrollView.h */,
-				BC6801A31CFC1AE600D5F82B /* GuidePageScrollView.m */,
 				BC6801A51CFC1F8E00D5F82B /* CALayer+Transition.h */,
 				BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */,
 				BC6801751CFC171500D5F82B /* Main.storyboard */,
@@ -297,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6801A41CFC1AE600D5F82B /* GuidePageScrollView.m in Sources */,
 				BC6801A11CFC172D00D5F82B /* XTGuidePagesViewController.m in Sources */,
 				BC6801741CFC171500D5F82B /* ViewController.m in Sources */,
 				BC6801711CFC171400D5F82B /* AppDelegate.m in Sources */,
@@ -446,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XTGuidePagesView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTGuidePagesView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XTGuidePagesView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTGuidePagesView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,6 +524,7 @@
 				BC6801981CFC171500D5F82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC6801991CFC171500D5F82B /* Build configuration list for PBXNativeTarget "XTGuidePagesViewTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +533,7 @@
 				BC68019B1CFC171500D5F82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC68019C1CFC171500D5F82B /* Build configuration list for PBXNativeTarget "XTGuidePagesViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +542,7 @@
 				BC68019E1CFC171500D5F82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

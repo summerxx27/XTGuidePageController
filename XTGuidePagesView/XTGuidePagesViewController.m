@@ -7,40 +7,69 @@
 //
 
 #import "XTGuidePagesViewController.h"
-#import "GuidePageScrollView.h"
 
+#define s_w [UIScreen mainScreen].bounds.size.width
+#define s_h [UIScreen mainScreen].bounds.size.height
 #define VERSION_INFO_CURRENT @"currentversion"
 @interface XTGuidePagesViewController ()
-
+@property (nonatomic, strong) UIImageView *image;
 @end
 
 @implementation XTGuidePagesViewController
-
-+ (instancetype)XTGuidePagesViewControllerOfImages:(NSArray *)images setUpBlock:(block)setupBlock
++ (instancetype)shareXTGuideVC
 {
-    XTGuidePagesViewController *xtGuidePages = [[XTGuidePagesViewController alloc] init];
-    if ([xtGuidePages isShow]) {
-        // 创建滚动视图
-        [xtGuidePages createSubviews: images];
+    static XTGuidePagesViewController *x = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        x = [[XTGuidePagesViewController alloc] init];
+    });
+    return x;
+}
+- (void)initWithXTGuideView:(NSArray *)images
+{
+    UIScrollView *gui = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, s_w, s_h)];
+    gui.pagingEnabled = YES;
+    // 隐藏滑动条
+    gui.showsHorizontalScrollIndicator = NO;
+    gui.showsVerticalScrollIndicator = NO;
+    // 取消反弹
+    gui.bounces = NO;
+    for (NSInteger i = 0; i < images.count; i ++) {
+        [gui addSubview:({
+            self.btnEnter = [UIButton buttonWithType:UIButtonTypeCustom];
+            self.btnEnter.frame = CGRectMake(s_w * i, 0, s_w, s_h);
+            [self.btnEnter setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];;
+            self.btnEnter;
+        })];
+        
+        [self.btnEnter addSubview:({
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [btn setTitle:@"点击进入" forState:UIControlStateNormal];
+            btn.frame = CGRectMake(s_w * i, s_h - 60, 100, 40);
+            btn.center = CGPointMake(s_w / 2, s_h - 60);
+            btn.backgroundColor = [UIColor lightGrayColor];
+            [btn addTarget:self action:@selector(clickEnter) forControlEvents:UIControlEventTouchUpInside];
+            btn;
+        })];
     }
-    return xtGuidePages;
+    gui.contentSize = CGSizeMake(s_w * images.count, 0);
+    [self.view addSubview:gui];
 }
-
-- (void)createSubviews:(NSArray *)images
+- (void)clickEnter
 {
-    GuidePageScrollView *sco = [[GuidePageScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    sco.images = images;
-    [self.view addSubview:sco];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(click)]) {
+        [self.delegate click];
+    }
 }
-
 - (BOOL)isShow
 {
-    NSString *currentVersion =[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     // 读取版本信息
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *localVersion = [user objectForKey:VERSION_INFO_CURRENT];
-    
-    if (localVersion == nil || currentVersion.floatValue != localVersion.floatValue) {
+    NSString *currentVersion =[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSLog(@"L ===%@", localVersion);
+    NSLog(@"C ===%@", currentVersion);
+    if (localVersion == nil || ![currentVersion isEqualToString:localVersion]) {
         [self saveCurrentVersion];
         return YES;
     }else
