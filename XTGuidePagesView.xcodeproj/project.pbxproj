@@ -15,11 +15,12 @@
 		BC68017C1CFC171500D5F82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC68017A1CFC171500D5F82B /* LaunchScreen.storyboard */; };
 		BC6801871CFC171500D5F82B /* XTGuidePagesViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801861CFC171500D5F82B /* XTGuidePagesViewTests.m */; };
 		BC6801921CFC171500D5F82B /* XTGuidePagesViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801911CFC171500D5F82B /* XTGuidePagesViewUITests.m */; };
-		BC6801A91CFC201000D5F82B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801A81CFC201000D5F82B /* 1.png */; };
-		BC6801AB1CFC201A00D5F82B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801AA1CFC201A00D5F82B /* 2.png */; };
-		BC6801AD1CFC202100D5F82B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801AC1CFC202100D5F82B /* 3.png */; };
 		BC6801B31CFD316C00D5F82B /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801B01CFD316C00D5F82B /* CALayer+Transition.m */; };
 		BC6801B41CFD316C00D5F82B /* XTGuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801B21CFD316C00D5F82B /* XTGuidePagesViewController.m */; };
+		BC6801B81CFD342B00D5F82B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801B71CFD342B00D5F82B /* 2.png */; };
+		BC6801C51CFD3DB400D5F82B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801C31CFD3DB400D5F82B /* 1.png */; };
+		BC6801C61CFD3DB400D5F82B /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801C41CFD3DB400D5F82B /* 4.png */; };
+		BC6801C81CFD3DF000D5F82B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801C71CFD3DF000D5F82B /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +57,14 @@
 		BC68018D1CFC171500D5F82B /* XTGuidePagesViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTGuidePagesViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6801911CFC171500D5F82B /* XTGuidePagesViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewUITests.m; sourceTree = "<group>"; };
 		BC6801931CFC171500D5F82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC6801A81CFC201000D5F82B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		BC6801AA1CFC201A00D5F82B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		BC6801AC1CFC202100D5F82B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		BC6801AF1CFD316C00D5F82B /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
 		BC6801B01CFD316C00D5F82B /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		BC6801B11CFD316C00D5F82B /* XTGuidePagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGuidePagesViewController.h; sourceTree = "<group>"; };
 		BC6801B21CFD316C00D5F82B /* XTGuidePagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewController.m; sourceTree = "<group>"; };
+		BC6801B71CFD342B00D5F82B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		BC6801C31CFD3DB400D5F82B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		BC6801C41CFD3DB400D5F82B /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		BC6801C71CFD3DF000D5F82B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +115,11 @@
 		BC68016B1CFC171400D5F82B /* XTGuidePagesView */ = {
 			isa = PBXGroup;
 			children = (
+				BC6801B71CFD342B00D5F82B /* 2.png */,
+				BC6801C71CFD3DF000D5F82B /* 3.png */,
+				BC6801C31CFD3DB400D5F82B /* 1.png */,
+				BC6801C41CFD3DB400D5F82B /* 4.png */,
 				BC6801AE1CFD316C00D5F82B /* XTGuidePageViewController */,
-				BC6801A81CFC201000D5F82B /* 1.png */,
-				BC6801AA1CFC201A00D5F82B /* 2.png */,
-				BC6801AC1CFC202100D5F82B /* 3.png */,
 				BC68016F1CFC171400D5F82B /* AppDelegate.h */,
 				BC6801701CFC171400D5F82B /* AppDelegate.m */,
 				BC6801721CFC171400D5F82B /* ViewController.h */,
@@ -270,12 +273,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6801B81CFD342B00D5F82B /* 2.png in Resources */,
 				BC68017C1CFC171500D5F82B /* LaunchScreen.storyboard in Resources */,
-				BC6801AD1CFC202100D5F82B /* 3.png in Resources */,
-				BC6801A91CFC201000D5F82B /* 1.png in Resources */,
-				BC6801AB1CFC201A00D5F82B /* 2.png in Resources */,
 				BC6801791CFC171500D5F82B /* Assets.xcassets in Resources */,
+				BC6801C61CFD3DB400D5F82B /* 4.png in Resources */,
 				BC6801771CFC171500D5F82B /* Main.storyboard in Resources */,
+				BC6801C81CFD3DF000D5F82B /* 3.png in Resources */,
+				BC6801C51CFD3DB400D5F82B /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

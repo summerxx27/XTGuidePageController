@@ -90,7 +90,4 @@
     NSUInteger i = isRamdom?arc4random_uniform((u_int32_t)count) : index;
     return array[i];
 }
-
-
-
 @end

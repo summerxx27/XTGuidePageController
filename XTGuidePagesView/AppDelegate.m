@@ -20,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSArray *images = @[@"1", @"2", @"3"];
+    // 测试的时候改变info 里的版本号就可以了
+    NSArray *images = @[@"1", @"2", @"3", @"4"];
     if ([[[XTGuidePagesViewController alloc] init] isShow]) {
         self.window.rootViewController = [XTGuidePagesViewController shareXTGuideVC];
         [[XTGuidePagesViewController shareXTGuideVC] initWithXTGuideView:images];

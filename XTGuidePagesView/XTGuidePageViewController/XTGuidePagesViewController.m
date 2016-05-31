@@ -101,6 +101,7 @@
 {
     self.pageControl.currentPage = scrollView.contentOffset.x / s_w;
 }
+
 @end
 
 
