@@ -28,7 +28,7 @@
     }else{
         [self click];
     }
-    
+
     return YES;
 }
 - (void)click

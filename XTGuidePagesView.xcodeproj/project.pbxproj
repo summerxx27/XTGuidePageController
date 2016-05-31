@@ -15,11 +15,11 @@
 		BC68017C1CFC171500D5F82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC68017A1CFC171500D5F82B /* LaunchScreen.storyboard */; };
 		BC6801871CFC171500D5F82B /* XTGuidePagesViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801861CFC171500D5F82B /* XTGuidePagesViewTests.m */; };
 		BC6801921CFC171500D5F82B /* XTGuidePagesViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801911CFC171500D5F82B /* XTGuidePagesViewUITests.m */; };
-		BC6801A11CFC172D00D5F82B /* XTGuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */; };
-		BC6801A71CFC1F8E00D5F82B /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */; };
 		BC6801A91CFC201000D5F82B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801A81CFC201000D5F82B /* 1.png */; };
 		BC6801AB1CFC201A00D5F82B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801AA1CFC201A00D5F82B /* 2.png */; };
 		BC6801AD1CFC202100D5F82B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6801AC1CFC202100D5F82B /* 3.png */; };
+		BC6801B31CFD316C00D5F82B /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801B01CFD316C00D5F82B /* CALayer+Transition.m */; };
+		BC6801B41CFD316C00D5F82B /* XTGuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6801B21CFD316C00D5F82B /* XTGuidePagesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		BC68018D1CFC171500D5F82B /* XTGuidePagesViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTGuidePagesViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6801911CFC171500D5F82B /* XTGuidePagesViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewUITests.m; sourceTree = "<group>"; };
 		BC6801931CFC171500D5F82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC68019F1CFC172D00D5F82B /* XTGuidePagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGuidePagesViewController.h; sourceTree = "<group>"; };
-		BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewController.m; sourceTree = "<group>"; };
-		BC6801A51CFC1F8E00D5F82B /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
-		BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		BC6801A81CFC201000D5F82B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		BC6801AA1CFC201A00D5F82B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		BC6801AC1CFC202100D5F82B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		BC6801AF1CFD316C00D5F82B /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		BC6801B01CFD316C00D5F82B /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
+		BC6801B11CFD316C00D5F82B /* XTGuidePagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTGuidePagesViewController.h; sourceTree = "<group>"; };
+		BC6801B21CFD316C00D5F82B /* XTGuidePagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTGuidePagesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +113,7 @@
 		BC68016B1CFC171400D5F82B /* XTGuidePagesView */ = {
 			isa = PBXGroup;
 			children = (
+				BC6801AE1CFD316C00D5F82B /* XTGuidePageViewController */,
 				BC6801A81CFC201000D5F82B /* 1.png */,
 				BC6801AA1CFC201A00D5F82B /* 2.png */,
 				BC6801AC1CFC202100D5F82B /* 3.png */,
@@ -120,10 +121,6 @@
 				BC6801701CFC171400D5F82B /* AppDelegate.m */,
 				BC6801721CFC171400D5F82B /* ViewController.h */,
 				BC6801731CFC171500D5F82B /* ViewController.m */,
-				BC68019F1CFC172D00D5F82B /* XTGuidePagesViewController.h */,
-				BC6801A01CFC172D00D5F82B /* XTGuidePagesViewController.m */,
-				BC6801A51CFC1F8E00D5F82B /* CALayer+Transition.h */,
-				BC6801A61CFC1F8E00D5F82B /* CALayer+Transition.m */,
 				BC6801751CFC171500D5F82B /* Main.storyboard */,
 				BC6801781CFC171500D5F82B /* Assets.xcassets */,
 				BC68017A1CFC171500D5F82B /* LaunchScreen.storyboard */,
@@ -157,6 +154,17 @@
 				BC6801931CFC171500D5F82B /* Info.plist */,
 			);
 			path = XTGuidePagesViewUITests;
+			sourceTree = "<group>";
+		};
+		BC6801AE1CFD316C00D5F82B /* XTGuidePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC6801AF1CFD316C00D5F82B /* CALayer+Transition.h */,
+				BC6801B01CFD316C00D5F82B /* CALayer+Transition.m */,
+				BC6801B11CFD316C00D5F82B /* XTGuidePagesViewController.h */,
+				BC6801B21CFD316C00D5F82B /* XTGuidePagesViewController.m */,
+			);
+			path = XTGuidePageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,10 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6801A11CFC172D00D5F82B /* XTGuidePagesViewController.m in Sources */,
 				BC6801741CFC171500D5F82B /* ViewController.m in Sources */,
 				BC6801711CFC171400D5F82B /* AppDelegate.m in Sources */,
-				BC6801A71CFC1F8E00D5F82B /* CALayer+Transition.m in Sources */,
+				BC6801B41CFD316C00D5F82B /* XTGuidePagesViewController.m in Sources */,
+				BC6801B31CFD316C00D5F82B /* CALayer+Transition.m in Sources */,
 				BC68016E1CFC171400D5F82B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
