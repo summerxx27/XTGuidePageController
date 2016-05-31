@@ -1,5 +1,6 @@
 # XTGuidePageController
 易用的引导页
+![](http://ww4.sinaimg.cn/large/e6a4355cgw1f4eghu3dz4g208w0gp1l2.gif)
 ```
 @interface AppDelegate ()<selectDelegate>
 ```
