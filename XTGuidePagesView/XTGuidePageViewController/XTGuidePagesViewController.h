@@ -18,8 +18,8 @@
 
 @property (nonatomic, strong) UIButton *btnEnter;
 // 初始化引导页
-- (void)initWithXTGuideView:(NSArray *)images;
-- (BOOL)isShow;
+- (void)guidePageControllerWithImages:(NSArray *)images;
++ (BOOL)isShow;
 @property (nonatomic, assign) id<selectDelegate> delegate;
-+ (instancetype)shareXTGuideVC;
+//+ (instancetype)shareXTGuideVC;
 @end

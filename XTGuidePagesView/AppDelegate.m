@@ -22,14 +22,15 @@
     
     // 测试的时候改变info 里的版本号就可以了
     NSArray *images = @[@"1", @"2", @"3", @"4"];
-    if ([[[XTGuidePagesViewController alloc] init] isShow]) {
-        self.window.rootViewController = [XTGuidePagesViewController shareXTGuideVC];
-        [[XTGuidePagesViewController shareXTGuideVC] initWithXTGuideView:images];
-        [XTGuidePagesViewController shareXTGuideVC].delegate = self;
+    BOOL y = [XTGuidePagesViewController isShow];
+    if (y) {
+        XTGuidePagesViewController *xt = [[XTGuidePagesViewController alloc] init];
+        self.window.rootViewController = xt;
+        xt.delegate = self;
+        [xt guidePageControllerWithImages:images];
     }else{
         [self click];
     }
-
     return YES;
 }
 - (void)click

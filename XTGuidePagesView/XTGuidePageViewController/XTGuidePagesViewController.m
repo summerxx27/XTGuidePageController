@@ -12,21 +12,13 @@
 #define s_h [UIScreen mainScreen].bounds.size.height
 #define VERSION_INFO_CURRENT @"currentversion"
 @interface XTGuidePagesViewController ()<UIScrollViewDelegate>
-@property (nonatomic, strong) UIImageView *image;
+
 @property (nonatomic, strong) UIPageControl *pageControl;
 @end
 
 @implementation XTGuidePagesViewController
-+ (instancetype)shareXTGuideVC
-{
-    static XTGuidePagesViewController *x = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        x = [[XTGuidePagesViewController alloc] init];
-    });
-    return x;
-}
-- (void)initWithXTGuideView:(NSArray *)images
+
+- (void)guidePageControllerWithImages:(NSArray *)images
 {
     UIScrollView *gui = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, s_w, s_h)];
     gui.delegate = self;
@@ -74,14 +66,14 @@
         [self.delegate click];
     }
 }
-- (BOOL)isShow
++ (BOOL)isShow
 {
     // 读取版本信息
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *localVersion = [user objectForKey:VERSION_INFO_CURRENT];
     NSString *currentVersion =[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     if (localVersion == nil || ![currentVersion isEqualToString:localVersion]) {
-        [self saveCurrentVersion];
+        [XTGuidePagesViewController saveCurrentVersion];
         return YES;
     }else
     {
@@ -89,7 +81,7 @@
     }
 }
 // 保存版本信息
-- (void)saveCurrentVersion
++ (void)saveCurrentVersion
 {
     NSString *version =[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
