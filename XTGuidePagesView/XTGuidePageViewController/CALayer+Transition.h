@@ -5,9 +5,7 @@
 
 @interface CALayer (Transition)
 
-/*
- *  动画类型
- */
+// 动画类型
 typedef NS_ENUM(NSInteger, TransitionAnimType){
     
     TransitionAnimTypeRippleEffect=0,
