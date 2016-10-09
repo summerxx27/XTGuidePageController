@@ -29,11 +29,11 @@
         xt.delegate = self;
         [xt guidePageControllerWithImages:images];
     }else{
-        [self click];
+        [self clickEnter];
     }
     return YES;
 }
-- (void)click
+- (void)clickEnter
 {
     ViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = vc;

@@ -11,7 +11,7 @@
 
 @protocol selectDelegate <NSObject>
 
-- (void)click;
+- (void)clickEnter;
 
 @end
 @interface XTGuidePagesViewController : UIViewController

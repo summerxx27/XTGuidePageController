@@ -62,8 +62,8 @@
 }
 - (void)clickEnter
 {
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(click)]) {
-        [self.delegate click];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(clickEnter)]) {
+        [self.delegate clickEnter];
     }
 }
 + (BOOL)isShow
